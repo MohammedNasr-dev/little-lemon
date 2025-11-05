@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #EDEFEE;
   font-family: 'Markazi Text', serif;
@@ -54,6 +58,23 @@ nav a {
   font-family: 'Markazi Text', serif;
 }
 
+.menuLinks {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menuLinks.open {
+  display: flex;
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+
 main {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -78,7 +99,7 @@ main {
 }
 
 .titleContainer h1 {
-  color: #F4CE14;
+  color: #EDEFEE;
   font-size: 45pt;
   font-family: 'Markazi Text', serif;
   font-weight: 500;
@@ -107,8 +128,8 @@ main {
 
 .reserveBtn {
   border: transparent;
-  background-color: #F4CE14;
-  color: #212121;
+  background-color: #EDEFEE;
+  color: #495E57;
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   font-size: 14pt;
@@ -120,6 +141,20 @@ main {
   -moz-border-radius: 0.8rem;
   -ms-border-radius: 0.8rem;
   -o-border-radius: 0.8rem;
+}
+
+.reserveBtn:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  -webkit-transition: ease-in-out 0.2s;
+  -moz-transition: ease-in-out 0.2s;
+  -ms-transition: ease-in-out 0.2s;
+  -o-transition: ease-in-out 0.2s;
 }
 
 .imgContainer {
@@ -171,8 +206,8 @@ main {
 
 .onlineMenuBtn {
   border: transparent;
-  background-color: #F4CE14;
-  color: #212121;
+  background-color: #495E57;
+  color: #EDEFEE;
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   font-size: 14pt;
@@ -491,16 +526,18 @@ footer img {
   font-weight: 500;
 }
 
-.navigation nav ul {
+.navigation ul {
   display: flex;
   flex-flow: column;
   gap: 0.2rem;
+  list-style: none;
 }
 
-.navigation nav a {
+.navigation a {
   font-family: 'Karla', sans-serif;
   color: #495e57;
   font-size: 13pt;
+  text-decoration: none;
 }
 
 .contactUs ul {
@@ -545,8 +582,182 @@ footer img {
   font-size: 12pt;
 }
 
+.reservationMain {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  min-height: 100vh;
+}
+
+.reservationSection {
+  margin: 0 auto 5rem;
+}
+
+.reservationSection h2 {
+  text-align: center;
+  font-family: 'Markazi', serif;
+  color: #495E57;
+  font-size: 28pt;
+  margin: 2rem;
+}
+
+.reservationTable {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  border: 1px solid #495E57;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.nameContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+input {
+    width: 95%;
+    min-height: 45px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #333;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 12pt;
+    padding: 10px;
+    color: #495E57;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+label {
+  font-family: 'Markazi', serif;
+  font-size: 22px;
+  padding-left: 0.5rem;
+  color: #495E57;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+.dateContainer, .timeContainer, .guestContainer, .occasionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+select {
+  width: 95%;
+    min-height: 45px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #333;
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.reservationTable button {
+  background-color: #495e57;
+  color:#EDEFEE;
+  font-family: 'Karla', sans-serif;
+  font-size: 12pt;
+  font-weight: 600;
+  min-width: 200px;
+  min-height: 50px;
+  padding-inline: 1rem;
+  box-shadow: 4px 4px 15px , rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
+.reservationConfirmation {
+  max-width: 250px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.5rem;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #EDEFEE;
+  color: #495E57;
+  text-align: left;
+  font-family:'Karla', sans-serif
+}
+
+.reservationConfirmation h3 {
+  text-align: center;
+  background-color: #495E57;
+  color: #EDEFEE;
+  margin: 0.5rem 0rem 1rem;
+}
+
+.confirmation {
+  background-color: #EDEFEE;
+}
+
+.confirmedBooking {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #495E57;
+  min-width: 250px;
+  min-height: 200px;
+  margin: 6rem auto;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.confirmedBooking h2 {
+  background-color: #495E57;
+  border: #EDEFEE;
+  color: #EDEFEE;
+  font-family: 'Markazi', serif;
+  font-size: 30pt;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.confirmedBooking p {
+  color: #495E57;
+  font-family: 'Karla',sans-serif;
+  font-size: 18pt;
+  font-weight: 500;
+  padding: 1.5rem;
+}
+
+
 /* ===================== */
-/* 📱 RESPONSIVE DESIGN */
+/* media queries */
 /* ===================== */
 
 /* Tablets and smaller laptops */
@@ -676,6 +887,26 @@ footer img {
     align-items: center;
     gap: 2rem;
   }
+
+  .mobileMenuBtn {
+  display: block;
+  position: absolute;
+  right: 10%;
+  max-width: 40px;
+  max-height: 50px;
+  }
+
+  .menuLinks {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* Adjust according to header height */
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
 }
 
 /* Small phones */
@@ -690,6 +921,7 @@ footer img {
 
   .titleContainer div h3 {
     font-size: 20pt;
+    margin-top: 0.5rem;
   }
 
   .reserveBtn,
@@ -725,5 +957,28 @@ footer img {
 
   .copyright p {
     font-size: 10pt;
+  }
+
+  /* Hide menu on small screens by default */
+.mobileMenuBtn {
+  display: block;
+  }
+
+  .menuLinks {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    width: 200px;
+  }
+
+  .menuLinks.open {
+    display: flex;
   }
 }

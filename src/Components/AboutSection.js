@@ -2,10 +2,17 @@ import React from "react";
 import FShot from '../assets/restaurant.jpg'
 import SShot from '../assets/Mario and Adrian b.jpg'
 
+/**
+ * AboutSection Component
+ *
+ * Provides information about the restaurant:
+ * - Brief description of the restaurant and its founders
+ * - Photo gallery showcasing the restaurant and owners
+ */
 const AboutSection = () => {
     return (
-        <section className="about">
-                <div className="text">
+        <section aria-label="About Section" className="about">
+                <div aria-label="Title And Paragraph" className="text">
                     <h2>Little Lemon</h2>
                     <h3>Chicago</h3>
                     <p>
@@ -21,7 +28,7 @@ const AboutSection = () => {
                         and welcoming atmosphere.
                     </p>
                 </div>
-                <div className="photos">
+                <div aria-label="Photo Gallery" className="photos">
                     <div className="firstPhoto">
                         <img src={FShot} alt="restaurant-entrance"/>
                     </div>

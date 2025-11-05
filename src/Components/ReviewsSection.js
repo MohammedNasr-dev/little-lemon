@@ -3,8 +3,16 @@ import FCustomer from '../assets/cst1.jpg'
 import SCustomer from '../assets/cst2.jpg'
 import TCustomer from '../assets/cst3.jpg'
 import FrCustomer from '../assets/cst4.jpg'
-import { FaStar, FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
+/**
+ * ReviewsSection Component
+ *
+ * Displays customer reviews with:
+ * - Customer photo, name, and username
+ * - Star rating
+ * - Review text
+ */
 const ReviewsSection = () => {
     return (
         <section className="customerReview">

@@ -1,10 +1,14 @@
 import React from 'react';
-import Logo from '../assets/Logo.svg'
+import Logo from '../assets/little-lemon-green-logo2.png'
 import Nav from './Nav';
 
+/**
+ * Header component displaying the restaurant logo and navigation menu.
+ * Appears on all pages. Uses semantic <header> and includes ARIA labeling for accessibility.
+ */
 const Header = () => {
     return (
-    <header className="header">
+    <header aria-label="Restaurant Logo" className="header">
         <img src={Logo} alt="logo"/>
         <Nav />
     </header>

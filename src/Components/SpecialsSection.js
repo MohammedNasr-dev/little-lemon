@@ -4,6 +4,14 @@ import Dish from '../assets/Dish icon.svg';
 import Pizza from '../assets/Diavolo.jpg';
 import Dessert from '../assets/lemon dessert.jpg';
 
+/**
+ * SpecialsSection Component
+ *
+ * Highlights weekly special dishes with:
+ * - Dish image, name, price, and description
+ * - Link to order delivery
+ * - Button for online menu
+ */
 const SpecialsSection = () => {
     return (
         <section className="secondSection">
